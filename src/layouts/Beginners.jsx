@@ -55,7 +55,7 @@ export default function BeginnersLayout() {
             }
             if (Array.isArray(tasks[key][nestedKey])) {
               return (
-                <ul key={key}>
+                <ul key={key} style={{ height: "auto" }}>
                   <span>
                     <h2> {key.split("_").join(": ")} </h2>
                     <OpenFile url={tasks[key].file} />
