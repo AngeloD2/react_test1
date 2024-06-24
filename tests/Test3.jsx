@@ -11,7 +11,8 @@
 //******************* Solution Requirements ********************/
 //1.) Map out the person object so it can be displayed in a list.
 //2.) The object keys should precede the object properties.
-//2.) ex: name: Angelo Dato
+//2a.) ex: name: Angelo Dato
+//3.) Explicitly typing out the object keys is not allowed.
 
 //******************** Tips ********************
 //1.) You can add/remove any react hook you might need to accomplish this test.
@@ -21,22 +22,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-export default function Test3() {
-  var color = "blue";
-
-  const styles = {
-    header: {
-      backgroundColor: color,
-      color: "white",
-      height: "20%",
-      width: "100%",
-      fontSize: "2rem",
-      textAlign: "center",
-      borderRadius: 4,
-      fontWeight: 600,
-    },
-  };
-
+export default function Test3Screen() {
   const people = {
     name: "Angelo Dato",
     age: 24,
@@ -46,11 +32,15 @@ export default function Test3() {
 
   return (
     <div className="testContainer">
-      <h1 style={styles.header}> blue </h1>
-
-      <ul>
-        <li> {people.name} </li>
-      </ul>
+      <div className="test4">
+        <h1>
+          Name: <br /> {people.name}
+        </h1>
+        <ul>
+          <li> Features: </li>
+          <li> {people.age} </li>
+        </ul>
+      </div>
     </div>
   );
 }

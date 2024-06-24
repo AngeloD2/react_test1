@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function OpenFile({ url }) {
+  const navigate = useNavigate();
+
   return (
     <p
       onClick={async () => {
@@ -13,14 +17,15 @@ export default function OpenFile({ url }) {
           }
           const data = await response.text();
           console.log("File opened successfully:", data);
+          if (url === "./tests/Test5.jsx") {
+            navigate("/entry/mockup");
+          }
         } catch (error) {
           console.error(`Error opening file: ${error}`);
         }
       }}
     >
-      <u className="text-blue-600 cursor-pointer">
-        Click here to get started.
-      </u>
+      <u className="text-orange-200 cursor-pointer">Click here to get started.</u>
     </p>
   );
 }

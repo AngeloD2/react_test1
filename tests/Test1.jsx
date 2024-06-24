@@ -1,14 +1,14 @@
 //***** Written by: Angelo Dato ******/
-//***** Difficulty: Entry Level *****/
+//***** Difficulty: Beginner *****/
 //***** Est. Time: 5 minutes ******/
 
 // ----------------------------------------------------------------------------------//
 //******************* Problem Title: Props ********************/
 
 //======================= Problem Description ==========================/
-//For this test, we want the h1 text to be dynamic so that every instance
-//of this component can display different texts.
-//Initially, the h1 element displays a blank string.
+// For this test, we want the h1 text to be dynamic so that every instance
+// of this component can display different texts.
+// Initially, the h1 element displays a blank string.
 
 //******************* Solution Requirements ********************/
 //1.) Allow the Test1 component to receive a text prop.
@@ -30,7 +30,7 @@ import React from "react";
 function Test1() {
   const styles = {
     header: {
-      backgroundColor: "#fcfcfc",
+      backgroundColor: "#cccccc",
       color: "black",
       height: "20%",
       width: "100%",

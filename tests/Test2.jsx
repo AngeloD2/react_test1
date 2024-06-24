@@ -1,5 +1,5 @@
 //***** Written by: Angelo Dato ******/
-//***** Difficulty: Entry Level *****/
+//***** Difficulty: Beginner Level *****/
 //***** Est. Time: 10 minutes ******/
 
 // ----------------------------------------------------------------------------------//
@@ -7,18 +7,18 @@
 
 //======================= Problem Description ==========================/
 //For this test, we want the component to reflect a new color.
-//Initially, the h1 element is given a color of "blue".
-//When the "change color" button is triggered, the background of the h1 element should change from blue to red, and vice-versa.
+//Initially, the h1 element is given a color of "lemonchiffon".
+//When the "change color" button is triggered, the background of the h1 element should change from lemonchiffon to coral, and vice-versa.
 
 //******************* Solution Requirements ********************/
 //1.) Create a stateful color variable.
-//2.) The initial background color of the h1 element should be blue.
-//3.) The background color of the h1 element should toggle between red and blue each time the button is triggered.
+//2.) The initial background color of the h1 element should be lemonchiffon.
+//3.) The background color of the h1 element should toggle between coral and lemonchiffon each time the button is triggered.
 //4.) The current color's name should be visible on screen within the h1 tag.
 
 //======================= BONUS =======================/
 //1.) You can make the text color of the h1 element be the opposite of the current background color.
-//if background is blue, text will be red, vice versa.
+//if background is lemonchiffon, text will be coral, vice versa.
 
 //******************** Tips ********************
 //1.) You can add/remove any react hook you might need to accomplish this test.
@@ -30,12 +30,12 @@
 import React from "react";
 
 export default function Test2Screen() {
-  var color = "blue";
+  var color = "LEMONCHIFFON";
 
   const styles = {
     header: {
       backgroundColor: color,
-      color: "white",
+      color: "purple",
       height: "20%",
       width: "100%",
       fontSize: "2rem",
@@ -47,15 +47,15 @@ export default function Test2Screen() {
       width: 130,
       height: 40,
       borderRadius: 5,
-      backgroundColor: "orange",
+      backgroundColor: "rgb(254 215 170)",
     },
   };
-  
+
   return (
     <div className="testContainer">
-      <h1 style={styles.header}> blue </h1>
+      <h1 style={styles.header}> Lemonchiffon </h1>
 
-      <button style={styles.btn} onClick={() => (color = "red")}>
+      <button style={styles.btn} onClick={() => (color = "coral")}>
         Toggle
       </button>
     </div>
