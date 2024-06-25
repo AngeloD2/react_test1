@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Nav({ links }) {
   return (
-    <nav className="min-h-16 h-16 md:px-24 md:py-2 sticky top-0 bg-purple-600 shadow-md grid grid-cols-3 place-items-center">
+    <nav className="min-h-16 h-16 md:px-24 md:py-2 sticky top-0 bg-purple-600 shadow-md grid grid-cols-3 place-items-center z-10">
       <ul>
         {links ? (
           <>

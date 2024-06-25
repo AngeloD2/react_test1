@@ -32,9 +32,9 @@ function Test1() {
     header: {
       backgroundColor: "#cccccc",
       color: "black",
-      height: "20%",
+      height: "auto",
       width: "100%",
-      fontSize: "2rem",
+      fontSize: "1.5rem",
       textAlign: "center",
       borderRadius: 4,
       fontWeight: 600,

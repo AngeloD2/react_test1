@@ -10,7 +10,7 @@ const tasks = {
     desc: "For this test, you will be making use of React Context. We have a variable named person, and we want this variable to be available throughout the application without having to redefine it in every instance.",
     steps: [
       "Use React Context.",
-      "Make the setter variable in your context available to the 'SetValuesHere' component.",
+      "Make the setter variable in your context available to the SetterComponent.",
       "The 'newPerson' variable is already defined.",
       "When you click the 'set' button, it will set the value of 'newPerson' to the 'person' variable.",
       "This 'person' variable must now be available throughout the application without redefining it.",
