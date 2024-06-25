@@ -17,8 +17,11 @@ export default function OpenFile({ url }) {
           }
           const data = await response.text();
           console.log("File opened successfully:", data);
-          if (url === "./tests/Test5.jsx") {
-            navigate("/entry/mockup");
+          if (url === "./tests/Test6.jsx") {
+            navigate("/ui/1");
+          }
+          if (url === "./tests/Test7.jsx") {
+            navigate("/ui/2");
           }
         } catch (error) {
           console.error(`Error opening file: ${error}`);

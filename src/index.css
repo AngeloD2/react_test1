@@ -43,7 +43,7 @@ section > ul > li {
   @apply space-y-12
 }
 .entry > section {
-  @apply h-auto space-y-2
+  @apply h-screen space-y-2
 }
 
 .test4 {

@@ -2,6 +2,7 @@ import OpenFile from "../components/OpenFile";
 import Test1Screen from "../../tests/Test1";
 import Test2Screen from "../../tests/Test2";
 import Test3Screen from "../../tests/Test3";
+import Test5Screen from "../../tests/Test5";
 import Nav from "../components/Nav";
 
 const tasks = {
@@ -19,6 +20,7 @@ const tasks = {
   task_2: {
     component: Test2Screen,
     file: "./tests/Test2.jsx",
+    desc: "Change styles based on stateful variable value.",
     steps: [
       "Create a stateful 'color' variable.",
       "The initial background color of the h1 element should be LEMONCHIFFON.",
@@ -35,6 +37,19 @@ const tasks = {
       "The object keys should precede the object properties.",
       "Explicitly typing out the object keys is not allowed.",
       " ex: name: Angelo Dato",
+    ],
+  },
+  task_4: {
+    component: Test5Screen,
+    file: "./tests/Test5.jsx",
+    desc: "For this test, you will be making use of Conditional Rendering.",
+    steps: [
+      "Create a stateful variable named 'loading' along with its setter..",
+      "Simulate a function that sends a request using the timeout function.",
+      "Upon click of the button, the function will run.",
+      "After the function is run, the application will enter a loading state.",
+      "During the loading state, display the imported <Loader /> component.",
+      "After completing the request, hide the <Loader /> component.",
     ],
   },
 };

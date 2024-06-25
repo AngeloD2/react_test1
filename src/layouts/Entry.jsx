@@ -17,29 +17,6 @@ const tasks = {
       "When the 'person' variable changes values, all components subscribed to it should display the changes.",
     ],
   },
-  task_2: {
-    component: Test5Screen,
-    file: "./tests/Test5.jsx",
-    desc: "For this test, you will be making use of Conditional Rendering. When we process a request, we should render an element to indicate that the system is working towards fulfilling the request.",
-    steps: [
-      "Create a stateful variable named 'loading' along with its setter..",
-      "Simulate a function that sends a request using the timeout function.",
-      "Upon click of the button, the function will run.",
-      "After the function is run, the application will enter a loading state.",
-      "During the loading state, display the imported <Loader /> component.",
-      "After completing the request, hide the <Loader /> component.",
-    ],
-  },
-  task_3: {
-    file: "./tests/Test6.jsx",
-    desc: "For this test, you will be translating a mockup from Figma to html, styled with TailwindCSS.",
-    steps: [
-      "Use TailwindCSS.",
-      "Translate the Figma mockup as best you can.",
-      "You have 45 minutes to accomplish this task.",
-      "Layout must be responsive, mobile first.",
-    ],
-  },
 };
 
 const links = [{ title: "Home", url: "/" }];
