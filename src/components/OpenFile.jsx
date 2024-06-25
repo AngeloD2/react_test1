@@ -3,13 +3,22 @@ import { useNavigate } from "react-router-dom";
 export default function OpenFile({ url }) {
   const navigate = useNavigate();
 
+  // Get the platform information
+  const platform = window.navigator.platform.toLowerCase();
+
+  // Check if the platform is Mac or Windows
+  const isMac = platform.includes("mac");
+
+  // Set the file path based on the platform
+  const filePath = isMac ? url.replace(/\\/g, "/") : url.replace(/\//g, "\\");
+
   return (
     <p
       onClick={async () => {
         try {
           const response = await fetch(
             `http://localhost:3001/open-file?filePath=${encodeURIComponent(
-              url
+              filePath
             )}`
           );
           if (!response.ok) {
@@ -17,10 +26,10 @@ export default function OpenFile({ url }) {
           }
           const data = await response.text();
           console.log("File opened successfully:", data);
-          if (url === "./tests/Test6.jsx") {
+          if (filePath === "./tests/Test6.jsx") {
             navigate("/ui/1");
           }
-          if (url === "./tests/Test7.jsx") {
+          if (filePath === "./tests/Test7.jsx") {
             navigate("/ui/2");
           }
         } catch (error) {
