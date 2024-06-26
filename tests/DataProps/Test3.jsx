@@ -35,7 +35,7 @@ export default function Test3Screen() {
       <Typography> Details: </Typography>
       <List>
         <ListItem>
-          <ListItemText> Name: {people.name} </ListItemText>{" "}
+          <ListItemText> Name: {people.name} </ListItemText>
         </ListItem>
       </List>
     </Box>
