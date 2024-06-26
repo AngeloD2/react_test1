@@ -79,7 +79,7 @@ function Screen() {
 
   return (
     <div className="testContainer">
-      <div className="test4">
+      <div className="stateComp">
         <h1> {person ? person.name : "No name found."} </h1>
         <SetterComponent />
       </div>

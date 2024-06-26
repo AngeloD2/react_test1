@@ -33,12 +33,10 @@ export default function Test3Screen() {
   return (
     <div className="testContainer">
       <div className="test4">
-        <h1>
-          Name: <br /> {people.name}
-        </h1>
+
+        <span> Details: </span>
         <ul>
-          <li> Features: </li>
-          <li> {people.age} </li>
+          <li> Name: {people.name} </li>
         </ul>
       </div>
     </div>

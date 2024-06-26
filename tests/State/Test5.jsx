@@ -27,7 +27,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import Loader from "../src/components/Loader";
+import Loader from "../../src/components/Loader";
 import { useState, useEffect } from "react";
 
 //default component.
@@ -37,17 +37,19 @@ export default function Test5Screen() {
   }
   return (
     <div className="testContainer">
-      <button
-        onClick={mockRequest}
-        style={{
-          backgroundColor: "rgb(254 215 170)",
-          width: 200,
-          height: 60,
-          borderRadius: 2.725,
-        }}
-      >
-        Send Request
-      </button>
+      <div className="stateComp">
+        <button
+          onClick={mockRequest}
+          style={{
+            backgroundColor: "rgb(254 215 170)",
+            width: 200,
+            height: 60,
+            borderRadius: 2.725,
+          }}
+        >
+          Send Request
+        </button>
+      </div>
     </div>
   );
 }

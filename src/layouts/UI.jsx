@@ -2,11 +2,13 @@ import OpenFile from "../components/OpenFile";
 import Nav from "../components/Nav";
 
 const tasks = {
-  Frontend_Challenge1: {
-    file: "./tests/Test6.jsx",
-    desc: "For this test, you will be translating a mockup from Figma to html, styled with TailwindCSS.",
+  React_Challenge1: {
+    file: "./tests/UI/Test6.jsx",
+    desc: "For this test, you will be translating a mockup from Figma to html, styled with TailwindCSS & incorporating MUIv5.",
     steps: [
+      "Clone the Github repo.",
       "Use TailwindCSS.",
+      "Use MUIv5.",
       "Translate the Figma mockup as best you can.",
       "Layout must be responsive, mobile first.",
       "Click on the links below to open a figma file.",
@@ -33,7 +35,7 @@ export default function UILayout() {
                 <ul key={key} style={{ height: "auto" }}>
                   <span>
                     <h2> {key.split("_").join(": ")} </h2>
-                    <OpenFile url={tasks[key].file} />
+                    {/* <OpenFile url={tasks[key].file} /> */}
                   </span>
                   <div style={{ marginBottom: 24 }}>
                     <p>
@@ -46,10 +48,25 @@ export default function UILayout() {
                       {index + 1}.) {item}
                     </li>
                   ))}
-                  <li> <a className="hover:text-blue-400 drop-shadow-md font-semibold text-lg" target="_blank" href="https://www.figma.com/proto/3cEc41DFR8aRARSWfiDY5C/Mobile?type=design&node-id=1-601&t=Qgo7XajmCDwgla14-1&scaling=scale-down&page-id=0%3A1&mode=design"> Mobile </a> </li>
-                  <li> <a className="hover:text-blue-400 drop-shadow-md font-semibold text-lg" target="_blank" href="https://www.figma.com/proto/e9fl9BXVDNLppohP36vr58/Desktop?type=design&node-id=1-1775&t=L2CwUaKNQsABBTlr-1&scaling=scale-down&page-id=1%3A1234&mode=design"> Desktop </a> </li>
-                  <li> <a className="hover:text-blue-400 drop-shadow-md font-semibold text-lg" target="_blank" href="https://www.figma.com/proto/t8u5FHqkPp6ZWZ5wShCB67/Tablet?type=design&node-id=1-1408&t=P9qa2KhTP4eCOqsK-1&scaling=scale-down&page-id=1%3A1233&mode=design"> Tablet (Portrait) </a> </li>
-                  <li> <a className="hover:text-blue-400 drop-shadow-md font-semibold text-lg" target="_blank" href="https://www.figma.com/proto/t8u5FHqkPp6ZWZ5wShCB67/Tablet?type=design&node-id=2001-384&t=8w9AxsspIaC7rRtS-1&scaling=scale-down&page-id=2001%3A374&mode=design"> Tablet (Landscape) </a> </li>
+                  <li className="flex flex-col">
+                    <a
+                      className="hover:text-blue-400 drop-shadow-md font-semibold text-lg"
+                      target="_blank"
+                      href="https://www.figma.com/design/OFiAn45eYwzYAdLBRONtDP/Onboarding-Test?node-id=0-1&t=DGMpvX7QfkFJk7ZF-1"
+                    >
+                      
+                      Figma
+                    </a>
+                    <a
+                      className="hover:text-blue-400 drop-shadow-md font-semibold text-lg"
+                      target="_blank"
+                      href="https://github.com/AngeloD2/ecv_react_challenge2"
+                    >
+                      
+                      Github Repo
+                    </a>
+                  </li>
+                  <li> Once you're done, upload the codebase to a public Github url under your account & Send us the URL</li>
                 </ul>
               );
             }

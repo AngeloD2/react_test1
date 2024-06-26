@@ -1,11 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
-import BeginnersLayout from "../layouts/Beginners";
-import EntryLayout from "../layouts/Entry";
+import DataPropsLayout from "../layouts/DataPropsLayout";
+import StateLayout from "../layouts/StateLayout";
 import UILayout from "../layouts/UI";
-import Test6Screen from "../../tests/Test6";
-import Test7Screen from "../../tests/Test7";
+import Test6Screen from "../../tests/UI/Test6";
 import Welcome from "../components/Welcome";
 
 export const router = createBrowserRouter([
@@ -19,12 +18,12 @@ export const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/beginner",
-        element: <BeginnersLayout />,
+        path: "/dataprops",
+        element: <DataPropsLayout />,
       },
       {
-        path: "/entry",
-        element: <EntryLayout />,
+        path: "/state",
+        element: <StateLayout />,
       },
     ],
   },
@@ -35,9 +34,5 @@ export const router = createBrowserRouter([
   {
     path: "/ui/1",
     element: <Test6Screen />,
-  },
-  {
-    path: "/ui/2",
-    element: <Test7Screen />,
   },
 ]);

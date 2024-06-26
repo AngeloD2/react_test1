@@ -30,9 +30,11 @@ import React from "react";
 function Test1() {
   const styles = {
     header: {
-      backgroundColor: "#cccccc",
       color: "black",
-      height: "auto",
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
       width: "100%",
       fontSize: "1.5rem",
       textAlign: "center",
@@ -46,7 +48,7 @@ function Test1() {
 
 export default function Test1Screen() {
   return (
-    <div className="testContainer">
+    <div style={{padding: 12}}>
       <Test1 />
     </div>
   );

@@ -28,36 +28,27 @@
 // ----------------------------------------------------------------------------------//
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Button, Typography } from "@mui/material";
 
 export default function Test2Screen() {
   var color = "LEMONCHIFFON";
-
-  const styles = {
-    header: {
-      backgroundColor: color,
-      color: "purple",
-      height: "20%",
-      width: "100%",
-      fontSize: "2rem",
-      textAlign: "center",
-      borderRadius: 4,
-      fontWeight: 600,
-    },
-    btn: {
-      width: 130,
-      height: 40,
-      borderRadius: 5,
-      backgroundColor: "rgb(254 215 170)",
-    },
-  };
+  var color2 = "CORAL";
 
   return (
     <div className="testContainer">
-      <h1 style={styles.header}> Lemonchiffon </h1>
+      <div className="stateComp">
+        <Typography
+          variant="h2"
+          component={"h2"}
+          sx={{ p: 3, backgroundColor: color }}
+        >
+          Lemonchiffon
+        </Typography>
 
-      <button style={styles.btn} onClick={() => (color = "coral")}>
-        Toggle
-      </button>
+        <Button variant="contained" onClick={() => (color = "coral")} sx={{width: '50%'}}>
+          Toggle
+        </Button>
+      </div>
     </div>
   );
 }
