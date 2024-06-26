@@ -58,13 +58,13 @@ export default function UILayout() {
                     >
                       Figma
                     </a>
-                    <a
+                    {/* <a
                       className="hover:text-blue-400 drop-shadow-md font-semibold text-lg"
                       target="_blank"
                       href="https://github.com/AngeloD2/ecv_react_challenge2"
                     >
                       Github Repo
-                    </a>
+                    </a> */}
                   </li>
                   <li>
                     Once you're done, upload the codebase to a public Github url
