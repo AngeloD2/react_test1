@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
     element: <UILayout />,
   },
   {
-    path: "/ui/1",
+    path: "/ui/test",
     element: <Test6Screen />,
   },
 ]);

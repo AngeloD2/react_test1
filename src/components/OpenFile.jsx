@@ -16,6 +16,8 @@ export default function OpenFile({ url }) {
     <p
       onClick={async () => {
         try {
+
+          console.log(filePath)
           const response = await fetch(
             `http://localhost:3001/open-file?filePath=${encodeURIComponent(
               filePath
@@ -26,8 +28,8 @@ export default function OpenFile({ url }) {
           }
           const data = await response.text();
           console.log("File opened successfully:", data);
-          if (filePath === "./tests/UI/Test6.jsx") {
-            navigate("/ui/1");
+          if (filePath === "./tests/UI/Test6.jsx" || filePath === ".\tests\UI\Test6.jsx") {
+            navigate("ui/test");
           }
         } catch (error) {
           console.error(`Error opening file: ${error}`);
