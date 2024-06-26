@@ -25,10 +25,12 @@
 
 // ----------------------------------------------------------------------------------//
 
+import { Box, Typography } from "@mui/material";
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useState, useContext, createContext } from "react";
+import { Button } from "@mui/material";
 
 //This is your context variable.
 const PersonContext = createContext();
@@ -59,17 +61,16 @@ function SetterComponent() {
   };
 
   return (
-    <button
-      style={{
-        backgroundColor: "rgb(254 215 170)",
+    <Button
+      variant="contained"
+      sx={{
         width: 200,
-        height: 60,
-        borderRadius: 2.725,
+        height: 45,
       }}
       onClick={() => setPerson()}
     >
       Set
-    </button>
+    </Button>
   );
 }
 
@@ -78,12 +79,12 @@ function Screen() {
   const person = "Jordan Ripley";
 
   return (
-    <div className="testContainer">
-      <div className="stateComp">
-        <h1> {person ? person.name : "No name found."} </h1>
+    <Box className="testContainer">
+      <Box className="stateComp">
+        <Typography> {person ? person.name : "No name found."} </Typography>
         <SetterComponent />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
 

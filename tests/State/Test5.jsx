@@ -29,27 +29,26 @@
 import React from "react";
 import Loader from "../../src/components/Loader";
 import { useState, useEffect } from "react";
-
+import { Box, Button } from "@mui/material";
 //default component.
 export default function Test5Screen() {
   function mockRequest() {
     setTimeout(() => {}, 1500);
   }
   return (
-    <div className="testContainer">
-      <div className="stateComp">
-        <button
-          onClick={mockRequest}
-          style={{
-            backgroundColor: "rgb(254 215 170)",
+    <Box className="testContainer">
+      <Box className="stateComp">
+        <Button
+          variant="contained"
+          sx={{
             width: 200,
-            height: 60,
-            borderRadius: 2.725,
+            height: 45,
           }}
+          onClick={mockRequest}
         >
           Send Request
-        </button>
-      </div>
-    </div>
+        </Button>
+      </Box>
+    </Box>
   );
 }

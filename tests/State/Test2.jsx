@@ -12,9 +12,10 @@
 
 //******************* Solution Requirements ********************/
 //1.) Create a stateful color variable.
-//2.) The initial background color of the h1 element should be lemonchiffon.
-//3.) The background color of the h1 element should toggle between coral and lemonchiffon each time the button is triggered.
-//4.) The current color's name should be visible on screen within the h1 tag.
+//2.) The initial background color of the Typography element should be lemonchiffon.
+//3.) Clicking the button should toggle Typography's background color between Coral and Lemonchiffon.
+//4.) The text color of the Typography element should be opposite its current background color.
+//5.) The current color's name should be visible on screen within the Typography tag.
 
 //======================= BONUS =======================/
 //1.) You can make the text color of the h1 element be the opposite of the current background color.
@@ -28,19 +29,17 @@
 // ----------------------------------------------------------------------------------//
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function Test2Screen() {
   var color = "LEMONCHIFFON";
   var color2 = "CORAL";
 
   return (
-    <div className="testContainer">
-      <div className="stateComp">
+    <Box sx={{paddingY: 4}}>
+      <Box className="stateComp">
         <Typography
-          variant="h2"
-          component={"h2"}
-          sx={{ p: 3, backgroundColor: color }}
+          sx={{ p: 3, backgroundColor: color, width: '90%', textAlign: 'center'}}
         >
           Lemonchiffon
         </Typography>
@@ -48,7 +47,7 @@ export default function Test2Screen() {
         <Button variant="contained" onClick={() => (color = "coral")} sx={{width: '50%'}}>
           Toggle
         </Button>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }

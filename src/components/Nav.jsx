@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function Nav({ links }) {
@@ -11,7 +12,7 @@ export default function Nav({ links }) {
                 key={link.title}
                 to={link.url}
                 title={link.title}
-                className="hover:-translate-x-1 hover:bg-blue-500 duration-100 transition-all px-4 py-2 md:w-24 bg-blue-400 text-slate-100 font-semibold flex items-center justify-center rounded-md"
+                className="hover:-translate-x-1 hover:bg-blue-500 duration-100 transition-all px-4 py-2 md:w-24 bg-blue-400 text-slate-100 font-semibold flex items-center justify-center rounded-[0.15rem]"
               >
                 <p> {link.title} </p>
               </Link>
@@ -19,7 +20,7 @@ export default function Nav({ links }) {
           </>
         ) : null}
       </ul>
-      <p className="place-items-center place-content-center self-center text-center md:text-2xl text-slate-100 drop-shadow-md"> React Test Suite </p>
+      <Typography className="place-items-center place-content-center self-center text-center md:text-2xl text-slate-100 drop-shadow-md"> React Test Suite </Typography>
     </nav>
   );
 }

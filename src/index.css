@@ -32,17 +32,10 @@ section > ul > li {
   @apply py-1 drop-shadow-sm;
 }
 
-.test4 {
-  @apply flex flex-col items-center justify-center gap-y-6 text-black my-6;
+.testCont {
+  @apply flex flex-col items-center justify-center gap-y-6 text-black py-6;
 }
 
-.test4 > h1 {
-  @apply text-2xl font-semibold;
-}
-
-.test4 > ul > li {
-  @apply text-xl
-}
 
 .stateComp {
   @apply  md:h-96 flex flex-col items-center justify-center space-y-12

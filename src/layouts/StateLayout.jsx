@@ -3,17 +3,26 @@ import Test4Screen from "../../tests/State/Test4";
 import Test2Screen from "../../tests/State/Test2";
 import Test5Screen from "../../tests/State/Test5";
 import Nav from "../components/Nav";
-import { Box, Container, Paper, List, ListItem, ListItemText, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Paper,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 const tasks = {
   task_1: {
     component: Test2Screen,
     file: "./tests/State/Test2.jsx",
     desc: "Change styles based on stateful variable value.",
     steps: [
-      "Create a stateful 'color' variable.",
-      "The initial background color of the h1 element should be LEMONCHIFFON.",
-      "The background color of the h1 element should toggle between CORAL and LEMONCHIFFON when the button is triggered.",
-      "The current color's name should be visible on screen within the h1 tag.",
+      "Create a stateful color variable.",
+      "The initial background color of the Typography element should be lemonchiffon.",
+      "Clicking the button should toggle Typography's background color between Coral and Lemonchiffon.",
+      "The text color of the Typography element should be opposite its current background color.",
+      "The current color's name should be visible on screen within the Typography tag.",
     ],
   },
   task_2: {
@@ -50,7 +59,7 @@ export default function StateLayout() {
   return (
     <>
       <Nav links={links} />
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {Object.keys(tasks).map((key) => (
           <Box
             key={tasks[key]}
@@ -71,22 +80,28 @@ export default function StateLayout() {
               }
               if (Array.isArray(tasks[key][nestedKey])) {
                 return (
-                  <Paper variant="elevation" key={key} className="p-8">
-                    <Typography
-                      variant="h4"
-                      className="first-letter:capitalize"
-                    >
-                      {key.split("_").join(": ")}
-                    </Typography>
-                    <OpenFile url={tasks[key].file} />
+                  <Paper
+                    variant="elevation"
+                    key={key}
+                    className="px-8 py-4 md:w-1/2"
+                  >
+                    <Box className="py-4">
+                      <Typography
+                        variant="h4"
+                        className="first-letter:capitalize"
+                      >
+                        {key.split("_").join(": ")}
+                      </Typography>
+                      <OpenFile url={tasks[key].file} />
+                    </Box>
                     <Box style={{ marginBottom: 24 }}>
                       <b> Description: </b>
-                      <p className="text-wrap md:w-2/3"> {tasks[key].desc} </p>
+                      <p className="text-wrap"> {tasks[key].desc} </p>
                     </Box>
                     <List>
                       {tasks[key][nestedKey].map((item, index) => (
                         <ListItem key={item}>
-                          <ListItemText>
+                          <ListItemText >
                             {index + 1}.) {item}
                           </ListItemText>
                         </ListItem>

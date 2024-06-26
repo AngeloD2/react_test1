@@ -6,12 +6,12 @@ import {
   Paper,
   Box,
   Container,
-  Button,
   List,
   ListItem,
   ListItemText,
   Typography,
 } from "@mui/material";
+
 const tasks = {
   task_1: {
     component: Test1Screen,
@@ -43,7 +43,7 @@ export default function DataPropsLayout() {
   return (
     <>
       <Nav links={links} />
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         {Object.keys(tasks).map((key) => (
           <Box
             key={tasks[key]}
@@ -64,22 +64,28 @@ export default function DataPropsLayout() {
               }
               if (Array.isArray(tasks[key][nestedKey])) {
                 return (
-                  <Paper variant="elevation" key={key} className="p-8">
-                    <Typography
-                      variant="h4"
-                      className="first-letter:capitalize"
-                    >
-                      {key.split("_").join(": ")}
-                    </Typography>
-                    <OpenFile url={tasks[key].file} />
+                  <Paper
+                    variant="elevation"
+                    key={key}
+                    className="px-8 py-4 md:w-1/2"
+                  >
+                    <Box className="py-4">
+                      <Typography
+                        variant="h4"
+                        className="first-letter:capitalize"
+                      >
+                        {key.split("_").join(": ")}
+                      </Typography>
+                      <OpenFile url={tasks[key].file} />
+                    </Box>
                     <Box style={{ marginBottom: 24 }}>
                       <b> Description: </b>
-                      <p className="text-wrap md:w-2/3"> {tasks[key].desc} </p>
+                      <p className="text-wrap"> {tasks[key].desc} </p>
                     </Box>
                     <List>
                       {tasks[key][nestedKey].map((item, index) => (
                         <ListItem key={item}>
-                          <ListItemText>
+                          <ListItemText >
                             {index + 1}.) {item}
                           </ListItemText>
                         </ListItem>

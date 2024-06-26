@@ -24,32 +24,18 @@
 // ----------------------------------------------------------------------------------//
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Box, Typography } from "@mui/material";
 
 // eslint-disable-next-line react/prop-types
 
 function Test1() {
-  const styles = {
-    header: {
-      color: "black",
-      height: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      width: "100%",
-      fontSize: "1.5rem",
-      textAlign: "center",
-      borderRadius: 4,
-      fontWeight: 600,
-    },
-  };
-
-  return <h1 style={styles.header}> Show props here </h1>;
+  return <Typography> Show props here </Typography>;
 }
 
 export default function Test1Screen() {
   return (
-    <div style={{padding: 12}}>
+    <Box className="testCont">
       <Test1 />
-    </div>
+    </Box>
   );
 }

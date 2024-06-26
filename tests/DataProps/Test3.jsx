@@ -21,7 +21,7 @@
 // ----------------------------------------------------------------------------------//
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
 export default function Test3Screen() {
   const people = {
     name: "Angelo Dato",
@@ -31,14 +31,13 @@ export default function Test3Screen() {
   };
 
   return (
-    <div className="testContainer">
-      <div className="test4">
-
-        <span> Details: </span>
-        <ul>
-          <li> Name: {people.name} </li>
-        </ul>
-      </div>
-    </div>
+    <Box className="testCont">
+      <Typography> Details: </Typography>
+      <List>
+        <ListItem>
+          <ListItemText> Name: {people.name} </ListItemText>{" "}
+        </ListItem>
+      </List>
+    </Box>
   );
 }
